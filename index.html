@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atelier Bois Clair : stands de salon et de festival, décors de Noël et de fêtes pour enfants, espaces de repos et constructions en bois clair.">
+  <title>Atelier Bois Clair | Stands, fêtes et constructions en bois clair</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barre de progression de lecture (animée par le CSS pendant le défilement) -->
+  <div class="progression" aria-hidden="true"></div>
+
+  <!-- =====================================================
+       LOGO (dessiné une fois, puis réutilisé avec <use>)
+       Idée du logo : un toit de charpente (la construction)
+       posé sur une coupe de tronc avec ses cernes (le bois clair).
+       ===================================================== -->
+  <svg class="cache" aria-hidden="true">
+    <defs>
+      <symbol id="logo-bois" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="48" class="f-fonce"/>
+        <circle cx="50" cy="50" r="43" class="anneau"/>
+        <!-- le toit -->
+        <path d="M20 40 L50 15 L80 40" class="toit"/>
+        <!-- la coupe de tronc -->
+        <circle cx="50" cy="62" r="23" class="f-clair"/>
+        <circle cx="50" cy="62" r="17" class="cerne"/>
+        <circle cx="50" cy="62" r="11" class="cerne"/>
+        <circle cx="50" cy="62" r="5" class="cerne"/>
+        <circle cx="50" cy="62" r="1.5" class="f-fonce"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ========== EN-TÊTE ========== -->
+  <header class="entete">
+    <a href="#accueil" class="logo" aria-label="Atelier Bois Clair, retour à l'accueil">
+      <svg class="logo-icone" viewBox="0 0 100 100" aria-hidden="true"><use href="#logo-bois"/></svg>
+      <span class="logo-texte"><small>Atelier</small>Bois Clair</span>
+    </a>
+
+    <!-- Menu mobile : une case à cocher cachée + un label (aucun JavaScript) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="burger" aria-label="Ouvrir ou fermer le menu"><span></span></label>
+
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#modeles">Modèles</a></li>
+        <li><a href="#evenements">Événements</a></li>
+        <li><a href="#methode">Méthode</a></li>
+        <li><a href="#contact" class="nav-devis">Devis</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== ACCUEIL (image de fond + logo) ========== -->
+    <section id="accueil" class="hero">
+      <div class="hero-contenu">
+        <svg class="logo-hero" viewBox="0 0 100 100" role="img" aria-label="Logo Atelier Bois Clair"><use href="#logo-bois"/></svg>
+        <p class="surtitre">Constructions et aménagements en bois clair</p>
+        <h1>Atelier Bois Clair</h1>
+        <p class="accroche">
+          Stands de salon, décors de fêtes, espaces de repos et constructions :
+          le bois clair donne vie à vos événements et à vos projets.
+        </p>
+        <div class="boutons">
+          <a href="#modeles" class="bouton">Voir les modèles</a>
+          <a href="#contact" class="bouton bouton-clair">Demander un devis</a>
+        </div>
+      </div>
+      <a href="#apropos" class="defile" aria-label="Descendre vers la suite"></a>
+    </section>
+
+    <!-- Bandeau défilant (décoratif) : le contenu est écrit deux fois pour que la boucle soit continue -->
+    <div class="bandeau" aria-hidden="true">
+      <div class="defilement">
+        <span>FestiShill</span><span>Shill and Groove</span><span>Fêtes de Noël</span><span>Fêtes pour enfants</span><span>Fêtes nationales</span><span>Fêtes locales</span><span>Stands de salon</span>
+        <span>FestiShill</span><span>Shill and Groove</span><span>Fêtes de Noël</span><span>Fêtes pour enfants</span><span>Fêtes nationales</span><span>Fêtes locales</span><span>Stands de salon</span>
+      </div>
+    </div>
+
+    <!-- ========== À PROPOS ========== -->
+    <section id="apropos" class="section">
+      <div class="apropos">
+        <div class="apropos-texte reveal">
+          <h2>Qui sommes-nous ?</h2>
+          <p>
+            <strong>Atelier Bois Clair</strong> imagine, fabrique et installe des
+            ouvrages en bois clair : stands de vente, décors pour les fêtes,
+            espaces de repos, mobilier et même des constructions complètes.
+          </p>
+          <p>
+            Nous intervenons pour les <strong>festivals</strong> comme le FestiShill
+            et le Shill and Groove, pour les <strong>fêtes nationales et locales</strong>,
+            les <strong>fêtes de Noël</strong> et les <strong>fêtes pour enfants</strong>.
+          </p>
+          <p>
+            Notre matière première est toujours la même : un bois clair, lumineux
+            et chaleureux, qui met en valeur ce qu'il abrite.
+          </p>
+        </div>
+        <figure class="apropos-image reveal">
+          <img src="images/stand-pergola-plantes.webp" alt="Stand en bois clair avec pergola, comptoir à claire-voie et plantes" width="429" height="266">
+          <figcaption>Un stand en bois clair avec pergola et comptoir d'accueil</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== POURQUOI LE BOIS CLAIR ========== -->
+    <section id="bois-clair" class="section section-alt">
+      <h2 class="reveal">Pourquoi choisir le bois clair ?</h2>
+      <div class="grille grille-4">
+        <article class="carte reveal">
+          <h3>Lumineux</h3>
+          <p>Sa teinte claire réfléchit la lumière et agrandit visuellement les espaces, de jour comme sous les guirlandes.</p>
+        </article>
+        <article class="carte reveal">
+          <h3>Chaleureux</h3>
+          <p>Il crée tout de suite une ambiance accueillante, idéale pour des lieux de fête, de vente ou de repos.</p>
+        </article>
+        <article class="carte reveal">
+          <h3>Modulable</h3>
+          <p>Les pièces se coupent, s'assemblent et se démontent facilement : un même stand peut être déplacé et réinstallé.</p>
+        </article>
+        <article class="carte reveal">
+          <h3>Naturel</h3>
+          <p>Matériau d'origine naturelle, il s'accorde avec les plantes, la pierre, les tissus et tous les décors.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section id="services" class="section">
+      <h2 class="reveal">Ce que nous réalisons</h2>
+      <p class="intro reveal">Six domaines, une seule matière : le bois clair.</p>
+      <div class="grille services">
+        <article class="service reveal">
+          <h3>Stands de salon et de festival</h3>
+          <p>Stands de vente, comptoirs d'accueil, stands à étage, façades décoratives. Rapides à monter, ils s'adaptent à chaque marque.</p>
+        </article>
+        <article class="service reveal">
+          <h3>Décors de Noël</h3>
+          <p>Chalets, panneaux décorés, abris à tables et bancs pour les marchés et les centres commerciaux.</p>
+        </article>
+        <article class="service reveal">
+          <h3>Fêtes pour enfants</h3>
+          <p>Espaces d'ateliers et d'animations, mobilier à bonne hauteur, décors colorés sur une base en bois.</p>
+        </article>
+        <article class="service reveal">
+          <h3>Espaces de repos et terrasses</h3>
+          <p>Terrasses en lames de bois, pergolas, bancs et salons pour se poser pendant une fête ou un festival.</p>
+        </article>
+        <article class="service reveal">
+          <h3>Mobilier, bars et décors</h3>
+          <p>Bars circulaires, podiums, présentoirs, étagères et installations décoratives sur mesure.</p>
+        </article>
+        <article class="service reveal">
+          <h3>Constructions en bois</h3>
+          <p>Halles, pavillons, maisons et bâtiments à ossature bois : poteaux, poutres, planchers et charpentes.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MODÈLES : galerie avec filtres (100 % CSS)
+         Principe : chaque bouton est un <input type="radio"> caché.
+         Quand il est coché, le CSS cache les articles dont
+         l'attribut data-cat ne contient pas sa catégorie.
+         Pour changer la catégorie d'un modèle, modifie son data-cat.
+         ===================================================== -->
+    <section id="modeles" class="section section-alt">
+      <h2 class="reveal">Nos modèles</h2>
+      <p class="intro reveal">
+        Voici des exemples de ce que l'on peut construire avec le bois clair.
+        Choisissez une catégorie, puis le modèle qui se rapproche de votre projet.
+      </p>
+
+      <div class="filtres">
+        <input type="radio" name="filtre" id="f-tous" checked>
+        <label for="f-tous">Tous</label>
+
+        <input type="radio" name="filtre" id="f-stands">
+        <label for="f-stands">Stands</label>
+
+        <input type="radio" name="filtre" id="f-evenements">
+        <label for="f-evenements">Fêtes et événements</label>
+
+        <input type="radio" name="filtre" id="f-amenagements">
+        <label for="f-amenagements">Aménagements</label>
+
+        <input type="radio" name="filtre" id="f-mobilier">
+        <label for="f-mobilier">Mobilier et décors</label>
+
+        <input type="radio" name="filtre" id="f-constructions">
+        <label for="f-constructions">Constructions</label>
+
+        <div class="galerie">
+
+          <!-- 1 -->
+          <article class="modele" data-cat="stands evenements">
+            <div class="visuel">
+              <img src="images/stand-festival-etage.webp" alt="Stand de festival en bois clair sur deux niveaux, avec escalier et bar" width="339" height="270" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Stand · Festival</p>
+              <h3>Stand de festival à étage</h3>
+              <p>Une construction sur deux niveaux : un bar au rez-de-chaussée, une terrasse à l'étage accessible par un escalier, une toiture à claire-voie et un habillage en lames de bois. Les panneaux en façade portent les noms et les couleurs de l'événement.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> festivals, concerts, fêtes de quartier.</p>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="modele" data-cat="stands evenements">
+            <div class="visuel">
+              <img src="images/stand-deux-niveaux.webp" alt="Stand en bois clair à deux niveaux avec comptoir d'accueil et enseigne en façade" width="283" height="270" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Stand · Événement sportif</p>
+              <h3>Stand à deux niveaux avec enseigne</h3>
+              <p>Une structure ouverte en poteaux et poutres de bois clair, avec un grand bandeau en façade pour l'enseigne, un comptoir d'accueil au sol et une zone à l'étage réservée aux invités.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> tournois, inaugurations, événements d'entreprise.</p>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="modele" data-cat="stands">
+            <div class="visuel">
+              <img src="images/stand-pergola-plantes.webp" alt="Stand de salon en bois avec pergola, comptoir à claire-voie et plantes" width="429" height="266" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Stand · Salon</p>
+              <h3>Stand à pergola et comptoir à claire-voie</h3>
+              <p>Un stand chaleureux : toiture en pergola qui laisse passer la lumière, comptoir d'accueil habillé de lattes de bois, panneaux latéraux en bois clair et plantes vertes pour adoucir l'ensemble.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> salons professionnels, expositions, accueil du public.</p>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="modele" data-cat="stands">
+            <div class="visuel">
+              <img src="images/stand-lattes.webp" alt="Stand de salon aux lignes épurées avec façade en lamelles de bois superposées" width="441" height="292" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Stand · Salon</p>
+              <h3>Stand à lamelles superposées</h3>
+              <p>Une façade faite de planches horizontales décalées, qui forment à la fois le décor et des assises. L'éclairage est intégré dans la structure pour un rendu moderne et épuré.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> showrooms, salons, présentation de marques.</p>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="modele" data-cat="stands">
+            <div class="visuel">
+              <img src="images/stand-branches.webp" alt="Stand de salon avec une façade décorative en branches et rondins de bois" width="400" height="300" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Stand · Décor naturel</p>
+              <h3>Stand à façade en branches</h3>
+              <p>Un stand original dont une paroi est entièrement habillée de branches et de rondins assemblés. Posée sur une structure légère, elle crée un effet naturel et très remarqué.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> salons, expositions, marques qui veulent se démarquer.</p>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="modele" data-cat="evenements stands">
+            <div class="visuel">
+              <img src="images/espace-plein-air-ecran.webp" alt="Espace en plein air avec cabines en bois, bar, terrasse et grand écran dans un cadre de bois" width="412" height="266" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Événement · Plein air</p>
+              <h3>Espace de fête en plein air</h3>
+              <p>Un ensemble complet : cabines en bois avec bar, plancher en lames, panneaux de séparation, et un grand écran encadré de bois pour diffuser des images ou des retransmissions.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> fêtes nationales, événements publics, retransmissions.</p>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="modele" data-cat="evenements">
+            <div class="visuel">
+              <img src="images/stand-noel-enfants.webp" alt="Chalet de Noël en bois avec panneau décoré de guirlandes et tables avec bancs pour enfants" width="343" height="306" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Fête · Noël et enfants</p>
+              <h3>Chalet d'ateliers de Noël</h3>
+              <p>Un panneau d'animation décoré de guirlandes et de motifs de Noël, avec un abri en bois qui accueille des tables et des bancs à hauteur d'enfant pour les ateliers.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> fêtes de Noël, centres commerciaux, animations pour enfants.</p>
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="modele" data-cat="amenagements">
+            <div class="visuel">
+              <img src="images/pergola-restauration.webp" alt="Espace de repos sous une pergola en bois avec canapés, tables hautes et parquet" width="435" height="289" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Aménagement · Repos</p>
+              <h3>Espace de repos sous pergola</h3>
+              <p>Une grande pergola en poutres de bois croisées, couverte de voiles blanches, avec un parquet en lames, des canapés, des tables hautes et des tables de restauration. Un vrai lieu de détente.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> places de repos en festival, restaurants éphémères, terrasses.</p>
+            </div>
+          </article>
+
+          <!-- 9 -->
+          <article class="modele" data-cat="amenagements">
+            <div class="visuel">
+              <img src="images/terrasse-jardin.webp" alt="Terrasse en lames de bois clair avec salon de jardin, table et jardinières" width="453" height="237" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Aménagement · Extérieur</p>
+              <h3>Terrasse et salon de jardin</h3>
+              <p>Une terrasse en lames de bois clair avec un salon extérieur : banquette-table basse, bancs, coin repas et jardinières. Les lignes simples se marient bien avec les plantes.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> places de repos, jardins, cafés et restaurants.</p>
+            </div>
+          </article>
+
+          <!-- 10 -->
+          <article class="modele" data-cat="amenagements">
+            <div class="visuel">
+              <img src="images/boutique-agencement.webp" alt="Boutique aménagée en bois clair avec étagères murales, comptoirs et présentoirs" width="473" height="266" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Aménagement · Boutique</p>
+              <h3>Agencement de boutique</h3>
+              <p>Un magasin entièrement équipé en bois clair : étagères murales à casiers, tables de présentation, comptoir de caisse et présentoirs. Chaque meuble est pensé pour ranger et mettre en valeur les produits.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> boutiques, épiceries fines, concept stores.</p>
+            </div>
+          </article>
+
+          <!-- 11 -->
+          <article class="modele" data-cat="mobilier evenements">
+            <div class="visuel">
+              <img src="images/bar-circulaire.webp" alt="Bar circulaire en planches de bois clair lors d'une réception" width="315" height="276" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Mobilier · Réception</p>
+              <h3>Bar circulaire</h3>
+              <p>Un bar en arrondi construit en planches de bois clair, avec un plan de travail large et des étagères. Sa façade peut recevoir un logo ou un message pour personnaliser l'événement.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> soirées, réceptions, lancements de produits.</p>
+            </div>
+          </article>
+
+          <!-- 12 -->
+          <article class="modele" data-cat="mobilier">
+            <div class="visuel">
+              <img src="images/podiums-presentoirs.webp" alt="Podiums et présentoirs en bois clair de différentes formes" width="376" height="270" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Mobilier · Présentation</p>
+              <h3>Podiums et présentoirs</h3>
+              <p>Des socles de différentes hauteurs, une niche éclairée et un pupitre sur pied pour mettre en valeur un produit, une œuvre ou un orateur. L'éclairage souligne les veines du bois.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> expositions, remises de prix, vitrines, présentations de produits.</p>
+            </div>
+          </article>
+
+          <!-- 13 -->
+          <article class="modele" data-cat="mobilier evenements">
+            <div class="visuel">
+              <img src="images/installation-croisee.webp" alt="Grandes structures décoratives en lattes de bois croisées sur une place" width="306" height="270" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Décor · Installation</p>
+              <h3>Structures en lattes croisées</h3>
+              <p>Des colonnes monumentales formées de lattes de bois qui se croisent, comme des sculptures. Elles marquent une entrée, une place ou le centre d'un événement.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> entrées de festival, places publiques, fêtes de ville.</p>
+            </div>
+          </article>
+
+          <!-- 14 -->
+          <article class="modele" data-cat="constructions amenagements">
+            <div class="visuel">
+              <img src="images/halle-charpente.webp" alt="Grande halle en charpente de bois clair avec parquet et grandes ouvertures" width="378" height="270" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Construction · Halle</p>
+              <h3>Halle en charpente de bois</h3>
+              <p>Une grande salle couverte, soutenue par des poteaux et une charpente apparente en bois clair, avec un parquet et de grandes ouvertures sur l'extérieur. Un volume lumineux et modulable.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> salles des fêtes, marchés couverts, mariages, repas de quartier.</p>
+            </div>
+          </article>
+
+          <!-- 15 -->
+          <article class="modele" data-cat="constructions">
+            <div class="visuel">
+              <img src="images/maison-foret.webp" alt="Maison en bois sur pilotis avec grandes baies vitrées et terrasse, au milieu d'une forêt" width="426" height="270" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Construction · Pavillon</p>
+              <h3>Pavillon en bois sur pilotis</h3>
+              <p>Une maison de plain-pied en bois clair, surélevée sur des plots, avec un toit à pente, de grandes baies vitrées et une terrasse en lames qui prolonge l'intérieur vers l'extérieur.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> maisons, bureaux, pavillons d'accueil, gîtes.</p>
+            </div>
+          </article>
+
+          <!-- 16 -->
+          <article class="modele" data-cat="constructions">
+            <div class="visuel">
+              <img src="images/ossature-etages.webp" alt="Structure à ossature bois sur plusieurs niveaux avec des ouvriers sur le chantier" width="332" height="264" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Construction · Ossature bois</p>
+              <h3>Bâtiment à ossature bois</h3>
+              <p>Une structure à plusieurs niveaux faite de poteaux, de poutres et de planchers en bois. Les éléments sont préparés à l'avance puis assemblés sur le chantier, ce qui accélère la construction.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> bâtiments, extensions, étages supplémentaires.</p>
+            </div>
+          </article>
+
+          <!-- 17 -->
+          <article class="modele" data-cat="constructions">
+            <div class="visuel">
+              <img src="images/immeuble-bois.webp" alt="Immeuble à façades en panneaux de bois clair et balcons en cours de construction" width="386" height="264" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Construction · Immeuble</p>
+              <h3>Immeuble à façades en bois</h3>
+              <p>Un bâtiment de plusieurs étages dont les façades sont composées de panneaux de bois clair, avec des balcons et de grandes fenêtres. Le bois est un matériau léger qui se transporte et se pose facilement.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> logements, bureaux, bâtiments publics.</p>
+            </div>
+          </article>
+
+          <!-- 18 -->
+          <article class="modele" data-cat="constructions">
+            <div class="visuel">
+              <img src="images/ossature-detail.webp" alt="Détail d'une ossature en bois clair avec poteaux, solives et plancher" width="437" height="267" loading="lazy">
+            </div>
+            <div class="texte">
+              <p class="etiquette">Construction · Charpente</p>
+              <h3>Charpente, solives et planchers</h3>
+              <p>Le squelette d'un bâtiment en bois : poteaux verticaux, solives qui portent le plancher et poutres horizontales. C'est la base de toute construction solide en bois clair.</p>
+              <p class="ideal"><strong>Idéal pour :</strong> planchers, mezzanines, charpentes de toit.</p>
+            </div>
+          </article>
+
+        </div><!-- fin .galerie -->
+      </div><!-- fin .filtres -->
+
+      <p class="note">Les photos sont des exemples d'inspiration : chaque projet est adapté à vos besoins, à votre lieu et à votre budget.</p>
+    </section>
+
+    <!-- ========== ÉVÉNEMENTS ========== -->
+    <section id="evenements" class="section">
+      <h2 class="reveal">Vos événements, notre savoir-faire</h2>
+      <p class="intro reveal">Du festival à la fête de Noël, nous installons des dispositifs en bois clair adaptés à chaque occasion.</p>
+
+      <div class="grille grille-3">
+        <article class="evenement reveal">
+          <img src="images/stand-festival-etage.webp" alt="Stand de festival en bois à deux niveaux" width="339" height="270" loading="lazy">
+          <div class="texte">
+            <h3>Festivals</h3>
+            <p>FestiShill, Shill and Groove et bien d'autres : stands à étage, bars, scènes, espaces de repos pour le public.</p>
+          </div>
+        </article>
+
+        <article class="evenement reveal">
+          <img src="images/stand-noel-enfants.webp" alt="Chalet de Noël pour les ateliers des enfants" width="343" height="306" loading="lazy">
+          <div class="texte">
+            <h3>Noël et fêtes pour enfants</h3>
+            <p>Chalets décorés, tables et bancs à hauteur d'enfant, abris pour les ateliers et les animations.</p>
+          </div>
+        </article>
+
+        <article class="evenement reveal">
+          <img src="images/espace-plein-air-ecran.webp" alt="Espace de fête en plein air avec écran et cabines en bois" width="412" height="266" loading="lazy">
+          <div class="texte">
+            <h3>Fêtes nationales et locales</h3>
+            <p>Espaces en plein air complets : cabines, buvettes, terrasses et grands écrans encadrés de bois.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== MÉTHODE (liste numérotée par le CSS) ========== -->
+    <section id="methode" class="section section-alt">
+      <h2 class="reveal">Comment travaillons-nous ?</h2>
+      <ol class="etapes">
+        <li class="reveal">
+          <h3>On écoute votre projet</h3>
+          <p>Type d'événement, lieu, date, nombre de personnes, budget et ambiance souhaitée.</p>
+        </li>
+        <li class="reveal">
+          <h3>Vous choisissez un modèle</h3>
+          <p>Vous partez d'un modèle de la galerie ou d'une idée à vous, que nous adaptons.</p>
+        </li>
+        <li class="reveal">
+          <h3>On fabrique en atelier</h3>
+          <p>Les pièces en bois clair sont découpées, assemblées et finies avant le jour J.</p>
+        </li>
+        <li class="reveal">
+          <h3>On installe et on démonte</h3>
+          <p>Nous montons le dispositif sur place, puis nous le démontons à la fin de l'événement.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <!-- Pour afficher un téléphone ou un e-mail, ajoute un paragraphe <p> ici. -->
+    <section id="contact" class="section">
+      <h2 class="reveal">Demander un devis</h2>
+      <p class="intro reveal">Décrivez-nous votre projet, nous vous répondons rapidement.</p>
+      <form class="formulaire reveal" action="#" method="post">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="mail">E-mail</label>
+        <input type="email" id="mail" name="mail" required>
+
+        <label for="projet">Type de projet</label>
+        <select id="projet" name="projet" required>
+          <option value="">Choisissez...</option>
+          <option>Stand de salon ou de festival</option>
+          <option>Décor de Noël</option>
+          <option>Fête pour enfants</option>
+          <option>Espace de repos ou terrasse</option>
+          <option>Mobilier, bar ou décor</option>
+          <option>Construction en bois</option>
+          <option>Autre projet</option>
+        </select>
+
+        <label for="date">Date souhaitée</label>
+        <input type="date" id="date" name="date">
+
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="bouton">Envoyer ma demande</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ========== PIED DE PAGE ========== -->
+  <footer class="pied">
+    <svg class="logo-pied" viewBox="0 0 100 100" aria-hidden="true"><use href="#logo-bois"/></svg>
+    <p class="pied-nom">Atelier Bois Clair</p>
+    <p>Stands, fêtes et constructions en bois clair.</p>
+    <p class="pied-petit">&copy; 2026 Atelier Bois Clair. Projet de classe. Photos d'illustration.</p>
+  </footer>
+
+</body>
+</html>
